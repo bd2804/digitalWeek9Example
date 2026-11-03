@@ -1,9 +1,15 @@
-int ledPin = 0;
+int ledPins[4] = { 0, 1, 2, 3 };
+int ledTotal = 4;
+
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  for (int i = 0; i < ledTotal; i++) {
+    pindmode(ledPins[i], OUTPUT);
+  }
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
+  for (int i = 0; i < ledTotal; i++) {
+    digitalWrite(ledPins[i], HIGH);
+  }
 }
